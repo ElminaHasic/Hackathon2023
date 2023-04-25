@@ -1,0 +1,14 @@
+EXPLANATION OF OUR APPROACH
+
+Following code is result of deep thinking about many ways we can encorporate dynamic programming
+and provide best possible time and space complexity. In our solution, even though we didn’t completely
+rely on dynamic programming we have ensured the most optimal time and space complexity with the
+most available resources.
+To minimize time complexity we have tried to reduce number of iterations through ArrayList
+shoppingCart when checking compatibility with secret code list by adding additional counter
+match_counter, to memorise index in shoppingCart where the matching in defined order started, so we
+don’t have to check entire shoppingCart every time. That way time complexity, in the worst case possible,
+is n(n-1)/2 in fact 1/2*n^2-1/2*n. In some corner cases we have provided time complexity O(1).
+When talking about space complexity, we have tried to avoid using any additional data structures, so only
+one String[] is used to provide access to each item in codeList group of fruits which is necessary when
+checking the match of Strings.
